@@ -6,7 +6,7 @@
 /*   By: adda-sil <adda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 16:21:24 by adda-sil          #+#    #+#             */
-/*   Updated: 2019/11/28 16:21:25 by adda-sil         ###   ########.fr       */
+/*   Updated: 2019/11/28 16:23:13 by adda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,7 @@ int a;
 int b;
 #define PRINT(...)\
 {\
-	printf("%s\n", #__VA_ARGS__);\
+	printf("ft_printf(%s)\n", #__VA_ARGS__);\
 	a = printf(__VA_ARGS__);\
 	printf(" (%d)\n", a);\
 	fflush(stdout);\
