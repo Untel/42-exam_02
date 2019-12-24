@@ -100,7 +100,11 @@ int	ft_parsehex(t_flags f, int nb)
 
 int ft_parsestring(t_flags f, char *str)
 {
-	int len = 0;
+	int len;
+	
+	len = 0;
+	if (str == NULL)
+		str = "(null)";
 	while (str[len])
 		len++;
 	len = f.prec > -1 && f.prec < len ? f.prec : len;
