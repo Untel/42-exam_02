@@ -80,15 +80,13 @@ int	ft_parseint(t_flags f, int nb)
 	return (size);
 }
 
-int	ft_parsehex(t_flags f, int nb)
+int	ft_parsehex(t_flags f, unsigned int nb)
 {
 	char	buff[4096];
 	int		size = 0;
-	unsigned int val;
 
 	buff[0] = 0;
-	val = (unsigned int)nb;
-	size = ft_itoa_base(buff, val, "0123456789abcdef", 16);
+	size = ft_itoa_base(buff, nb, "0123456789abcdef", 16);
 	if (f.prec > -1)
 		while (size < f.prec)
 			buff[4095 - size++] = '0';
